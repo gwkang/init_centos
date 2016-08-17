@@ -20,6 +20,8 @@ make
 cd src
 make install
 cd ../utils
+
+# YOU SHOULD REPLY TO SOME QUESTIONS AT THIS TIME.
 ./install_server.sh
 
 # install nvm & some node packages
