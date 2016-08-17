@@ -1,13 +1,17 @@
 yum groupinstall "Development Tools" -y
 
 # install mariadb
-yum install mariadb -y
-yum install mariadb-server -y
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+rpm -ivh mysql-community-release-el7-5.noarch.rpm
+yum update -y
+yum install mysql-server -y
 cd ~
-sed '/\[mysqld\]/ a collation-server=utf8_general_ci' /etc/my.cnf > my.cnf
-sed '/\[mysqld\]/ a character-set-server=utf8' my.cnf > my.cnf
+sed '/\[mysqld\]/ a collation-server=utf8_general_ci' /etc/my.cnf | sed '/\[mysqld\]/ a character-set-server=utf8' > my.cnf
 cp -f my.cnf /etc/my.cnf
-service mariadb restart
+systemctl start mysqld
+
+# YOU SHOULD REPLY TO SOME QUESTIONS AT THIS TIME.
+mysql_secure_installation
 
 yum install -y vim
 yum install -y wget
