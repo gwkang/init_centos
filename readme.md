@@ -1,5 +1,5 @@
 ## Install Scripts for Developers on CentOS 
 
 ```
-curl https://raw.githubusercontent.com/gwkang/vimrc/master/set_vim.sh | bash
+curl https://raw.githubusercontent.com/gwkang/init_centos/master/centos7_mariadb_redis_nvm.sh | bash
 ```
