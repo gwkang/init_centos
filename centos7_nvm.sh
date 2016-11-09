@@ -1,4 +1,4 @@
-yum groupinstall "Development Tools" -y
+sudo yum groupinstall "Development Tools" -y
 
 # install nvm & some node packages
 cd ~
